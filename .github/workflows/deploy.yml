@@ -3,8 +3,8 @@ name: Deploy Jekyll Site
 on:
   push:
     branches:
-      - main # Ensure this is your default branch
-  workflow_dispatch: # Allows manual deployment
+      - main # or your default branch
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   build:
@@ -17,10 +17,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.1"
+          ruby-version: "3.1" # Update Ruby version if necessary
 
       - name: Install Jekyll and Bundler
-        run: gem install jekyll bundler
+        run: |
+          gem install bundler
+          bundle install
 
       - name: Build Jekyll Site
         run: bundle exec jekyll build
