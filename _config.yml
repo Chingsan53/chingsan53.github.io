@@ -1,6 +1,6 @@
 title: My Jekyll Site
 description: A simple description of my Jekyll site
-author: Your Name
+author: Chingsan53
 url: "https://chingsan53.github.io"
 baseurl: "" # Leave this empty for root ("/" if deployed in a subfolder)
 theme: jekyll-theme-slate # You can change this to any theme you like
